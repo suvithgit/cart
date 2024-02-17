@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+      {{product.description|truncatewords:155}}
+{% endblock %}
+{% block title %}
+  {% if category %}
+     {{product.name}}
+  {% endif %}
+{% endblock %}
+{% block content %}
+<div>
+    <div>
+        <p></p><a href="{% url 'kartapp:allprodtCate' %}">Home</a> | <a href="{{product.category.get_url}}">{{product.category}}</a>|{{product.name}}</p>
+    </div>
+</div>
+ <br>
+
+
+      <div class="container">
+       <div class="row">
+        <div class="col-sm-6">
+            <div class="card border-solid-6">
+
+
+        <div>
+            <img src="{{product.image.url}}" alt="{{product.name}}" class="card-img-top" >
+                 </div>
+
+                 </div>
+          </div>
+<!--        </div>-->
+
+
+
+
+
+<!--       <div class="row">-->
+        <div class="col-sm-6">
+            <div class="card border-solid-2 ">
+             <div class="product"><h2>{{product.name}}</h2></div>
+                 <div class="dics"><p></p><h5>{{product.description}}</h5></p></div>
+                     <div class="price"><h3>${{product.price}}</h3></div>
+
+
+            <div>
+                {% if product.stock <= 0 %}
+                <h3><b>OUT OF STOCK</b></h3>
+                {% else %}
+                <h2><a class="btn btn-secondary" href="{% url 'cart:add_cart' product.id %}">ADD TO CART</a></h2>
+                {% endif %}
+            </div>
+                </div>
+            </div>
+           </div>
+          </div>
+
+
+{% endblock %}
+

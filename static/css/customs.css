@@ -1,0 +1,71 @@
+
+.product{
+       text-align:center;
+       font-family:Impact;
+
+}
+.dics{
+
+       font-family:Bell MT;
+
+}
+.price{
+       text-align:center;
+       font-family:Impact;
+
+}
+
+
+
+body{
+     font-family:Showcard Gothic;
+
+}
+
+
+/*** nav ***/
+.nav-item{
+         letter spacing: .2em;
+         font-size:14px;
+         text-transform:uppercase;
+
+}
+.dropdown-item{
+         letter spacing: .2em;
+         font-size:14px;
+         text-transform:uppercase;
+}
+.my_footer p{
+      padding-top:50px;
+      padding-bottom:200px;
+      text-align:center;
+      background-color:aqua;
+      color:red;
+
+
+}
+.my_search{
+     padding-top:20px;
+
+}
+/*** cart ***/
+.my_table{
+      min-width:400px;
+      font-size:14PX;
+}
+.my-thead {
+      font-weight:normal;
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      background-color:#f8f8fa!important;
+}
+.custom_a{
+      text-decoration:none;
+}
+.custom_icon{
+      text-decoration:none;
+      color:#868e96!important;
+}
+.my_custom-button{
+      margin-top:5px;
+}
